@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://e2k1p2hymwm1"]
+
+[ext_resource type="Theme" uid="uid://bcmul1c13tjn6" path="res://gui/themes/main_menu_theme.tres" id="1_p1vue"]
+[ext_resource type="Script" path="res://gui/scripts/main_menu.gd" id="2_eb36s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mwp6c"]
+font_size = 53
+
+[node name="MainMenu" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_p1vue")
+script = ExtResource("2_eb36s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MMGameTitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Imperial Ascension"
+label_settings = SubResource("LabelSettings_mwp6c")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MMMainContents" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MMLeftPanel" type="VBoxContainer" parent="VBoxContainer/MMMainContents"]
+layout_mode = 2
+alignment = 2
+
+[node name="MMVersionsLabel" type="Label" parent="VBoxContainer/MMMainContents/MMLeftPanel"]
+layout_mode = 2
+text = "Version 0.0.1
+Godot Version 4.2.2
+Created by Jack Thorp"
+vertical_alignment = 2
+
+[node name="MMCenterPanel" type="VBoxContainer" parent="VBoxContainer/MMMainContents"]
+layout_mode = 2
+size_flags_horizontal = 6
+alignment = 1
+
+[node name="MMSinglePlayerBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+layout_mode = 2
+text = "Single Player"
+
+[node name="MMMultiPlayerBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+layout_mode = 2
+text = "Multiplayer"
+
+[node name="MMModsBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+layout_mode = 2
+text = "Modded"
+
+[node name="MMOptionsBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+layout_mode = 2
+text = "Options"
+
+[node name="MMRightPanel" type="VBoxContainer" parent="VBoxContainer/MMMainContents"]
+layout_mode = 2
+alignment = 2
+
+[node name="MMSourceLink" type="LinkButton" parent="VBoxContainer/MMMainContents/MMRightPanel"]
+layout_mode = 2
+text = "Source"
+underline = 1
+uri = "google.com"

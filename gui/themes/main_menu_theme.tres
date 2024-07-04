@@ -1,0 +1,4 @@
+[gd_resource type="Theme" format=3 uid="uid://bcmul1c13tjn6"]
+
+[resource]
+/colors/LightGray = Color(0.517184, 0.517184, 0.517184, 1)
