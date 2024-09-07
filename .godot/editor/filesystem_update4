@@ -1,0 +1,7 @@
+res://gui/scenes/main_menu.tscn
+res://gui/themes/main_menu_theme.tres
+res://gui/themes/menu_theme_components/menu_btn_style.tres
+res://gui/scripts/main_menu.gd
+res://gui/scenes/single_player_menu.tscn
+res://gui/scripts/single_player_menu.gd
+res://gui/themes/menu_theme_components/progress_bar_style.tres

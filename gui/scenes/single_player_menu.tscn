@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://demeg2wysc6bv"]
+[gd_scene load_steps=3 format=3 uid="uid://demeg2wysc6bv"]
+
+[ext_resource type="Theme" uid="uid://bcmul1c13tjn6" path="res://gui/themes/main_menu_theme.tres" id="1_qideo"]
+[ext_resource type="Script" path="res://gui/scripts/single_player_menu.gd" id="2_s0uvq"]
 
 [node name="SinglePlayerMenu" type="PanelContainer"]
 anchors_preset = 15
@@ -6,3 +9,53 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_qideo")
+script = ExtResource("2_s0uvq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="MainColumn" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MainColumn"]
+layout_mode = 2
+text = "Singleplayer"
+horizontal_alignment = 1
+
+[node name="ButtonColumn" type="VBoxContainer" parent="MainColumn"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Spacer" type="Control" parent="MainColumn/ButtonColumn"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="NewGameButton" type="Button" parent="MainColumn/ButtonColumn"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "New Game"
+
+[node name="Spacer2" type="Control" parent="MainColumn/ButtonColumn"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="LoadGameButton" type="Button" parent="MainColumn/ButtonColumn"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Load Game"
+
+[node name="Spacer3" type="Control" parent="MainColumn/ButtonColumn"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="MainColumn/ButtonColumn"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Main Menu
+"
+
+[connection signal="pressed" from="MainColumn/ButtonColumn/MainMenuButton" to="." method="_on_main_menu_pressed"]

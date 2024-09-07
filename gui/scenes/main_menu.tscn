@@ -15,6 +15,9 @@ grow_vertical = 2
 theme = ExtResource("1_p1vue")
 script = ExtResource("2_eb36s")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
@@ -45,21 +48,41 @@ layout_mode = 2
 size_flags_horizontal = 6
 alignment = 1
 
+[node name="Spacer" type="Control" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
 [node name="MMSinglePlayerBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
 layout_mode = 2
 text = "Single Player"
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
 
 [node name="MMMultiPlayerBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
 layout_mode = 2
 text = "Multiplayer"
 
+[node name="Spacer3" type="Control" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
 [node name="MMModsBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
 layout_mode = 2
-text = "Modded"
+text = "Mods"
+
+[node name="Spacer4" type="Control" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
 
 [node name="MMOptionsBtn" type="Button" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
 layout_mode = 2
 text = "Options"
+
+[node name="Spacer5" type="Control" parent="VBoxContainer/MMMainContents/MMCenterPanel"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
 
 [node name="MMRightPanel" type="VBoxContainer" parent="VBoxContainer/MMMainContents"]
 layout_mode = 2
@@ -69,4 +92,6 @@ alignment = 2
 layout_mode = 2
 text = "Source"
 underline = 1
-uri = "google.com"
+uri = "https://github.com/jthorp07/ImperialAscensionProject"
+
+[connection signal="pressed" from="VBoxContainer/MMMainContents/MMCenterPanel/MMSinglePlayerBtn" to="." method="_on_single_player_pressed"]

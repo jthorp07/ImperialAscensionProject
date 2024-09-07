@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcvbkqcmm4un3"]
+
+[ext_resource type="PackedScene" uid="uid://dqs1gcjoj0cpn" path="res://core/scenes/UnitStats.tscn" id="1_5eu0l"]
+[ext_resource type="Script" path="res://core/scripts/GameUnit.gd" id="1_u5onv"]
+[ext_resource type="PackedScene" uid="uid://bxo0faql7i0q" path="res://core/scenes/UnitActions.tscn" id="2_o4kwy"]
+
+[node name="GameUnit" type="Node2D"]
+script = ExtResource("1_u5onv")
+
+[node name="UnitStats" parent="." instance=ExtResource("1_5eu0l")]
+
+[node name="UnitActions" parent="." instance=ExtResource("2_o4kwy")]
